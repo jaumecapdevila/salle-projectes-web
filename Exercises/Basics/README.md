@@ -32,6 +32,13 @@ Crea un script PHP que rebent una frase com a paràmetre retorni la següent inf
 * Nombre total de paraules
 * El nombre total de vegades que apareix cada paraula 
 
+### Exercici 6
+Crea 3 scripts PHP que ens permetin simular una to-do list. Les funcionalitats de cada fixter són les següents:
+
+* **add_task.php** -> rep una tasca com a argument i la afegeix en el fitxer
+* **remove_task.php** -> rep una tasca com a argument i la intenta eliminar del fitxer en cas que la trobi
+* **display_tasks.php** -> mostra totes les tasques que hi han a la llista
+
 ### Exercici 5
 Crea un formulari usant el metode POST amb els seguents camps:
 - Nom (cadena de caracters amb longitud maxima 20)
