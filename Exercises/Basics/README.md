@@ -57,7 +57,7 @@ Modifica l'exercici anterior per tal que l'enviament del formulari es realitzi a
 **Nota:** Podeu fer servir la llibreria de jQuery.
 
 ### Exercici 9
-Modifica el formulari de l'exercici anterior per tal que els usuaris puguin pujar una imatge de perfil que ha de complir les següents especificacions:
+Modifica el formulari de l'exercici 7 per tal que els usuaris puguin pujar una imatge de perfil que ha de complir les següents especificacions:
 
 - Ha d'ocupar menys d'1 Mb
 - Ha de tenir una mida màxima de 200x200px
