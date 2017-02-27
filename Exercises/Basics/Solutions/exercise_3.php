@@ -8,7 +8,7 @@ $operation = $argv[1];
 $numbers = array_slice($argv, 2);
 
 if (in_array($operation, $validOperations)) {
-    echo $operation($firstNumber, $secondNumber) . "\n";
+    echo $operation($numbers) . "\n";
     exit;
 }
 
