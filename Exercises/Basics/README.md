@@ -102,3 +102,11 @@ Per tal de registrar-se en l'aplicació els usuaris han d'introduir el seu nom i
 * El DNI ha de ser vàlid (00000000-A)
 
 Per altra banda també s'ha de crear una pàgina de login que mostri als usuaris un formulari on podran introduir el seu correu i la seva contrasenya. En cas que l'usuari existeixi a la base de dades s'haurà de mostrar la seva informació per pantalla. En cas contrari es mostrarà un missatge d'error. 
+
+### Exercici 13
+Partint de l'exercici 11, aplica les següents modificacions:
+
+* S'ha de crear una classe **Task** que contingui com a propietats les columnes de la taula que hàgiu fet servir per emmagatzemar les tasques. 
+* S'ha de crear una classe **Database**, que seguint el patró [Singleton](https://es.wikipedia.org/wiki/Singleton), ens retorni una nova connexió amb la base de dades i que ens permeti executar queries, tant *prepared statements* com normals. Cal tenir en compte que la connexió amb la base de dades s'ha d'establir fent servir PDO. 
+* S'ha de crear una interface **TasksRepository** que contingui la declaració dels mètodes per tal d'esborrar, crear, modificar i recuperar una tasca. Cal fer servir *Type Hinting*.
+* S'ha de crear una classe **PdoTasksRepository** que rebi la classe **Database** per constructor. Aquesta classe ha d'implementar els mètodes declarats en la interface **TasksRepository** fent servir els mètodes de la classe Database que rep per constructor. 
