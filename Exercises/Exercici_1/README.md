@@ -55,9 +55,11 @@ El formulari únicament ha de contenir dos camps:
 * Un per introduïr el nom d'usuari o bé el correu
 * Un per introduïr la contrasenya
 
-En cas que l'inici de sessió sigui satisfactori, s'haurà de redirigir als usuaris a la pàgina principal amb la sessió iniciada. En cas contrari s'haurà de mostrar un missatge en el mateix formulari.
+En cas que l'inici de sessió sigui satisfactori, s'haurà de redirigir als usuaris a la pàgina principal amb la sessió iniciada. A més a més, caldrà guardar les credencials de l'usuari en *cookies* per tal que quan aquest es torni a connectar, l'aplicació pugui iniciar la seva sessió automàticament. **Cal tenir en compte** que la informació que es guarda en les *cookies* pot ser modificada pels usuaris de forma manual. Per aquest motiu caldrà comprovar la validesa de les credencials emmagatzemades en les *cookies* en la base de dades abans d'iniciar la sessió de l'usuari.
 
-**Nota:** Cal tenir en compte que els usuaris poden intentar fer-nos injeccions SQL a través del formulari. Per aquest motiu el vostre codi ha d'estar preparat per tal de reduir el màxim possible aquest tipus d'atacs tal com es va veure a classe.  
+**Nota:** Les cookies s'han de guardar durant una setmana. 
+ 
+En cas es produeixi algún error a l'hora d'iniciar la sessió caldrà mostrar el missatge corresponent en el formulari de login. Recordeu que els usuaris poden intentar fer-nos injeccions SQL a través del formulari. Per aquest motiu el vostre codi ha d'estar preparat per tal de reduir el màxim possible aquest tipus d'atacs (tal com es va veure a classe).  
 
 ## Pàgina per afegir una nova entrada
 En aquesta pàgina els usuaris que hagin iniciat la seva sessió disposaran d'un formulari que els permetrà afegir una nova entrada al blog. És un **requisit** que l'usuari estigui *loguejat* per tal de poder accedir a aquesta secció. Caldrà redirigir a tots els usuaris que intentin accedir a aquesta secció sense tenir una sessió iniciada a la pàgina de login. 
@@ -79,7 +81,9 @@ Per tal de guardar les entrades del blog haureu d'afegir una nova taula a la vos
 En aquesta pàgina els usuaris que hagin iniciat una sessió podran veure un llistat amb totes les seves entrades. El contingut a mostrar de cada entrada ha de ser el mateix que el que es mostra en la pàgina principal a excepció del nom d'usuari del creador. 
 
 ## Altres requeriments
-* Cal fer servir la llibreria de Bootstrap per tal de donar estil al vostre blog. 
+* Cal fer servir la llibreria de Bootstrap per tal de donar estil al vostre blog. Com a mínim cal utilitzar el sistema de columnes per tal de fer que el contingut s'adapti a múltiples resolucions i també els següents [components](http://getbootstrap.com/components):
+	*  	Nav / Navbar
+	*  Input groups 
 * Cal validar el contingut del formulari de registre amb Javascript abans d'enviar la informació al servidor. Es recomana fer servir la llibreria **jQuery** però no és obligatori.
 * El vostre codi HTML no pot contenir css o codi javascript *inline*.
 
