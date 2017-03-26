@@ -87,7 +87,7 @@ L'exercici consisteix a acabar d'implementar els casos restants de la to do list
 ##Entrega
 Aquest exercici s'ha de realitzar i entregar de forma individual.
 
-La **data límit** per realitzar l'entrega serà el **dilluns dia 10 d'Abril**. Per tal de realitzar l'entrega haureu de penjar un zip al pou corresponent que trobareu a l'estudy. El contingut del zip ha de ser el següent:
+La **data límit** per realitzar l'entrega serà el **dilluns dia 3 d'Abril**. Per tal de realitzar l'entrega haureu de penjar un zip al pou corresponent que trobareu a l'estudy. El contingut del zip ha de ser el següent:
 
 * Codi 
 * README bàsic amb una breu explicació del codi i qualsevol indicació que cregueu convenient que tinguem en compte.  
