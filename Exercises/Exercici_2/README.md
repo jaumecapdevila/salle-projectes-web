@@ -1,12 +1,12 @@
-#MVC To do list
+# MVC To do list
 To do list implementada seguint el patró de disseny MVC
 
-##Introducció
+## Introducció
 En aquesta entrega haureu de completar la to do list que vam començar a classe seguint el patró de disseny MVC. El codi inicial que heu de fer servir el podeu trobar dins de la carpeta `code` en aquest mateix directori. 
 
 **Nota:** Per crear la base de dades i la taula necessària per realitzar l'exercici podeu fer servir el següent [dump](https://github.com/jaumecapdevila/salle-projectes-web/blob/master/Exercises/Basics/Solutions/todolist.sql)  
 
-##  Requeriments
+## Requeriments
 Per tal que el següent codi funcioni correctament heu de crear un **vhost** que apunti a la carpeta root on poseu el codi. Exemple:
 
 ```
