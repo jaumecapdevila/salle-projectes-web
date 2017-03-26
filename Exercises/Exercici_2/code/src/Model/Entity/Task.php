@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . "/TasksRepository.php";
+namespace ProjectesWeb\Model\Entity;
 
 /**
  *  Task
@@ -38,6 +38,7 @@ class Task
     public function id(): int
     {
         return $this->id;
+        $test = "test";
     }
 
     /**

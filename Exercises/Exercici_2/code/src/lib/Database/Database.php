@@ -1,5 +1,7 @@
 <?php
 
+namespace ProjectesWeb\lib\Database;
+
 /**
  * Database
  */
@@ -14,35 +16,42 @@ class Database
      */
     private static $instance = null;
 
+
     /**
-     * @return Database|null
+     * @param $dbname
+     * @param $user
+     * @param $password
+     * @return null|Database
      */
-    public static function getInstance()
+    public static function getInstance($dbname, $user, $password)
     {
         if (!self::$instance) {
-            self::$instance = new self();
+            self::$instance = new self($dbname, $user, $password);
         }
         return self::$instance;
     }
 
     /**
      * Database constructor.
+     * @param $dbname
+     * @param $user
+     * @param $password
      */
-    private function __construct()
+    private function __construct($dbname, $user, $password)
     {
-        $this->connection = new PDO(
-            'mysql:host=localhost;dbname=todolist;',
-            'homestead',
-            'secret'
+        $this->connection = new \PDO(
+            "mysql:host=localhost;dbname=$dbname;",
+            $user,
+            $password
         );
         $this->connection->setAttribute(
-            PDO::ATTR_DEFAULT_FETCH_MODE,
-            PDO::FETCH_ASSOC
+            \PDO::ATTR_DEFAULT_FETCH_MODE,
+            \PDO::FETCH_ASSOC
         );
     }
 
-
     /**
+     * Execute the given query
      * @param $query
      * @return PDOStatement
      */

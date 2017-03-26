@@ -1,7 +1,9 @@
 <?php
-require_once __DIR__ . "/TasksRepository.php";
-require_once __DIR__ . "/Database.php";
-require_once __DIR__ . "/Task.php";
+
+namespace ProjectesWeb\Model\Repository;
+
+use ProjectesWeb\lib\Database\Database;
+use ProjectesWeb\Model\Entity\Task;
 
 /**
  * PdoTasksRepository
@@ -90,7 +92,7 @@ class PdoTasksRepository implements TasksRepository
      * @param int $id
      * @return bool|Task
      */
-    public function get(int $id)
+    public function get(int $id): Task
     {
         $query = "SELECT * from tasks WHERE id = ?";
         $statement = $this->db->preparedQuery(
@@ -114,7 +116,7 @@ class PdoTasksRepository implements TasksRepository
      * Return all the tasks of the database
      * @return array
      */
-    public function getAll()
+    public function getAll(): array
     {
         $statement = $this->db->query(
             "SELECT * from tasks ORDER BY id DESC"

@@ -1,5 +1,7 @@
 <?php
-require_once __DIR__ . "/Task.php";
+namespace ProjectesWeb\Model\Repository;
+
+use ProjectesWeb\Model\Entity\Task;
 
 interface TasksRepository
 {
@@ -10,4 +12,7 @@ interface TasksRepository
     public function update(Task $task);
 
     public function get(int $id);
+
+    public function getAll();
 }
+
