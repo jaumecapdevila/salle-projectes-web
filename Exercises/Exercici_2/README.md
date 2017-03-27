@@ -19,6 +19,17 @@ Per tal que el següent codi funcioni correctament heu de crear un **vhost** que
         </Directory>
 </VirtualHost>
 ``` 
+
+També cal crear un fitxer **.htaccess** a la carpeta arrel del projecte amb el següent contingut:
+
+```
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
+``` 
 On la carpeta **exericse_2** és on es troba el codi del projecte. 
 
 ## Estructura del projecte 
