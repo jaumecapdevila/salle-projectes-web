@@ -90,11 +90,13 @@ L'exercici consisteix a acabar d'implementar els casos restants de la to do list
 
 1. Cal definir la ruta **/task/add** en el fitxer index.php. Aquesta ruta només ha de ser accessible des d'una petició **POST**
 2. Cal afegir una nova acció al controlador **postAddTaskAction** que s'encarregui de recollir la informació enviada des del formulari i d'inserir la tasca corresponent a la base de dades.
+3. Un cop eliminada cal redirigir als usuaris a la pàgina home / fent servir l'objecte **RedirectResponse** que ens ofereix la llibreria
 
 ### Eliminar una tasca
 
 1. Cal definir la ruta **/task/remove/{id}** en el fitxer index.php. Aquesta ruta només ha de ser accessible des d'una petició **GET**
 2. Cal afegir una nova acció al controlador **removeTaskAction** que s'encarregui de recollir el *id* de la tasca i d'eliminar la tasca corresponent. 
+3. Un cop eliminada cal redirigir als usuaris a la pàgina home / fent servir l'objecte **RedirectResponse** que ens ofereix la llibreria
 
 ## Entrega
 Aquest exercici s'ha de realitzar i entregar de forma individual.
