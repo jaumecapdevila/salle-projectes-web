@@ -93,7 +93,7 @@ L'exercici consisteix a acabar d'implementar els casos restants de la to do list
 
 ### Eliminar una tasca
 
-1. Cal definir la ruta **/task/remove/{id}** en el fitxer index.php. Aquesta ruta només ha de ser accessible des d'una petició **POST**
+1. Cal definir la ruta **/task/remove/{id}** en el fitxer index.php. Aquesta ruta només ha de ser accessible des d'una petició **GET**
 2. Cal afegir una nova acció al controlador **removeTaskAction** que s'encarregui de recollir el *id* de la tasca i d'eliminar la tasca corresponent. 
 
 ## Entrega
