@@ -1,0 +1,13 @@
+{% extends "base.twig" %}
+
+{% block title %}Hello page{% endblock %}
+{% block head %}
+    {{ parent() }}
+    <style type="text/css">
+        h1{ text-transform: uppercase; }
+    </style>
+{% endblock %}
+{% block content %}
+    <h1>Hello {{ user }}!</h1>
+{% endblock %}
+

@@ -1,0 +1,19 @@
+{% extends "base.twig" %}
+{% block title %}User add{% endblock %}
+{% block content %}
+    <h1>Add user</h1>
+    <form action="/users/add" METHOD="POST">
+        <label for="name">Name:</label><input type="text" name="name">
+        {% if errors.name is defined %}
+            <p>{{ errors.name }}</p>
+        {% endif %}
+        <label for="email">Email:</label><input type="email" name="email">
+        {% if errors.email is defined %}
+            <p>{{ errors.email }}</p>
+        {% endif %}
+        <input type="submit" value="Send">
+        {% if errors.unexpected is defined %}
+            <p>{{ errors.unexpected }}</p>
+        {% endif %}
+    </form>
+{% endblock %}

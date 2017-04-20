@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% block head %}
+        <link rel="stylesheet" type="text/css" href="{{ asset('/styles.css', 'css') }}">
+        <title>{% block title %}{% endblock %} - My Webpage</title>
+    {% endblock %}
+</head>
+<body>
+<div id="content">{% block content %}{% endblock %}</div>
+<div id="footer">
+    {% block footer %}
+        &copy; Copyright 2017
+    {% endblock %}
+</div>
+{% block scripts %}
+    <script src="{{ asset('/app.js', 'js') }}" type="text/javascript" charset="utf-8"></script>
+{% endblock %}
+</body>
+</html>
+

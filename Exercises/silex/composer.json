@@ -1,0 +1,26 @@
+{
+    "name": "projectesweb/silexapp",
+    "description": "First silex application",
+    "type": "project",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Jaume Capdevila",
+            "email": "jcapdevila@salleurl.edu"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "silex/silex" : "~2.0",
+        "silex/web-profiler": "~2.0",
+        "twig/twig": "^2.3",
+        "symfony/asset": "^3.2",
+        "symfony/twig-bridge": "^3.2",
+        "doctrine/dbal": "~2.2"
+    },
+    "autoload" : {
+        "psr-4": {
+            "SilexApp\\" : "src/"
+        }
+    }
+}
