@@ -1,0 +1,33 @@
+---
+
+- name: "Install epel from remote repo"
+  yum: name=https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm state=present
+  become: yes
+
+- name: "Install remi from remote repo"
+  yum: name=http://rpms.remirepo.net/enterprise/remi-release-7.rpm state=present
+  become: yes
+
+- name: "Upgrade all packages"
+  yum: name=* state=latest
+  become: yes
+
+- name: "Install PHP 7.1"
+  yum: pkg={{ item }} enablerepo=remi,remi-php71 state=present
+  with_items:
+    - php
+  become: yes
+
+- name: "Install Apache"
+  yum:
+    name: httpd
+    state: present
+  become: yes
+
+- name: "ec2-user user is the owner of /var/www/html"
+  file:
+    path: /var/www/html
+    owner: ec2-user
+    group: ec2-user
+    mode: 0755
+  become: yes
